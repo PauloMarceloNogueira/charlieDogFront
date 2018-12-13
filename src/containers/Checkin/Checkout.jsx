@@ -42,7 +42,7 @@ const Checkout = (props) => {
             <div className="row" key={res.data.id}>
               <div className="cart-product col-md-12">
                 <div className="cart-product-pic col-md-2">
-                  <img className="checkin_dog_picture" src={`src/public/img/${res.data.picture}`} />
+                  <img className="checkin_dog_picture" src={`https://s3.amazonaws.com/charliedog/Dogs/${res.data.picture}`} />
                 </div>
                 <div className="cart-product-info col-md-8">
                   <div className="cart-product-info--name col-md-12"> {res.data.name}</div>

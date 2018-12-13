@@ -29,7 +29,7 @@ class DogsBox extends React.Component {
           <a className="" onClick={this.onOpenModal} href="#">
             <div className="col-md-3" >
               <div className="box-cachorro">
-                  <img src={this.props.picture ? `src/public/img/${this.props.picture}` : 'src/public/img/pug.jpg'} alt="Pug Branco" />
+                  <img src={this.props.picture ? `https://s3.amazonaws.com/charliedog/Dogs/${this.props.picture}` : 'https://s3.amazonaws.com/charliedog/Dogs/pug.jpg'} alt="Pug Branco" />
                   <div className="btn-foto">Leva eu!</div>
                   <div>
                     <span className="titulo-cachorro">{this.props.name}</span>

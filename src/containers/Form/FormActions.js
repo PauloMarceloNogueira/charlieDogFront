@@ -1,5 +1,5 @@
 import axios from 'axios';
-const URL = 'http://localhost:3003';
+const URL = 'http://ec2-204-236-249-146.compute-1.amazonaws.com:3003/';
 
 const Form_name = (e) => {
   return {

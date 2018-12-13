@@ -16,7 +16,6 @@ class Header extends React.Component {
   }
 
   render() {
-    console.log(this.props, 'HEADR');
     return (
       <div>
         {this.props.value.length > 0 ? 

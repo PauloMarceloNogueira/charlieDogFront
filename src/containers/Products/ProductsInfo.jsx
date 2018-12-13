@@ -36,7 +36,7 @@ class ProductInfo extends React.Component {
       <div>
         {this.state.loading ? <Loading /> : 
           <div className="box-cachorro">
-            <img src={picture ? `src/public/img/${picture}` : 'src/public/img/pug.jpg'} alt="Pug Branco" />
+            <img src={picture ? `https://s3.amazonaws.com/charliedog/Dogs/${picture}` : 'https://s3.amazonaws.com/charliedog/Dogs/pug.jpg'} alt="Pug Branco" />
             <div className="btn-foto" data-dogid={this.props.dogId} onClick={this.props.add_to_cart}>Adicionar ao carrinho!</div>
             <div>
               <span className="titulo-cachorro">{name}</span>
