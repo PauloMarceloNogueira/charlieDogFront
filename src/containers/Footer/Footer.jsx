@@ -1,5 +1,6 @@
 import React from 'react';
 import List from '../../components/List/List.jsx';
+import ValueList from '../../components/List/ValueList.jsx';
 import Logo from '../../components/Logo/Logo.jsx';
 
 import './Footer.scss';
@@ -12,39 +13,51 @@ const Footer = () => (
           data = {[
             {
               title: 'mini',
-              href: '#'
+              href: '#',
+              size: 'mini'
             },
             {
               title: 'pequeno porte',
-              href: '#'
+              href: '#',
+              size: 'small',
             },
             {
               title: 'médio porte',
-              href: '#'
+              href: '#',
+              size: 'medium',
             },
             {
               title: 'grande porte',
-              href: '#'
+              href: '#',
+              size: 'big'
             },
           ]}
         />
-         <List 
+         <ValueList 
           data = {[
             {
               title: 'até R$100,00',
-              href: '#'
+              href: '#',
+              min: 0,
+              max: 100,
             },
             {
               title: 'de R$100 a R$300',
-              href: '#'
+              href: '#',
+              min: 100,
+              max: 300,
             },
             {
               title: 'de R$300 a R$500',
-              href: '#'
+              href: '#',
+              min: 300,
+              max: 500,
             },
             {
               title: 'acima de R$500',
-              href: '#'
+              href: '#',
+              min: 500,
+              max: 10000,
             },
           ]}
         />

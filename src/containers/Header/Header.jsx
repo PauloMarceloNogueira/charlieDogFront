@@ -16,6 +16,7 @@ class Header extends React.Component {
   }
 
   render() {
+    console.log(this.props, 'HEADR');
     return (
       <div>
         {this.props.value.length > 0 ? 
@@ -24,6 +25,12 @@ class Header extends React.Component {
           </div>
         :
         null}
+        {this.props.value.data && this.props.value.data.length < 1 ? 
+          <div className="alert alert-danger text-center" role="alert">
+          Nenhum cachorro com essas características!
+          </div>
+        : <div></div>}
+        
         
         <div className="header">
           <div className="container">

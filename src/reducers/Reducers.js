@@ -1,4 +1,4 @@
-export default (state = {}, action, cart_value ) => {
+export default (state = {}, action ) => {
   switch(action.type) {
     case 'SEARCHED':
       return {
@@ -17,25 +17,12 @@ export default (state = {}, action, cart_value ) => {
           data: action.payload
         }
       ]
-    case 'CHANGE_FORM_NAME':
-      return [
-        ...state,
-        {
-          form: {
-            name: action.payload
-          }
+      case 'CHANGED_ADDRESS':
+      return {
+        checkin: {
+          address: action.payload
         }
-      ]
-    
-      case 'CHANGE_FORM_ADDRESS':
-      return [
-        ...state,
-        {
-          form: {
-            address: action.payload
-          }
-        }
-      ]
+      }
     default:
       return state;
   }

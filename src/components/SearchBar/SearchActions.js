@@ -10,14 +10,35 @@ const search_changed = (e) => {
 }
 
 const search_success = (response) => {
+  console.log(response, 'Response');
   return {
     type: 'SEARCH_SUCCESS',
     payload: response
   }
 }
 
+const filtered = (e) => {
+  console.log('fitered')
+  return (dispatch, getState) => {
+    axios.get(`${URL}/dogs/size/${e.target.getAttribute('data-size')}`)
+      .then((response) => {
+        const dog_filtered = response.data
+        dispatch(search_success(dog_filtered))
+      })
+  }
+}
+
+const filteredByValue = (e) => {
+  return (dispatch, getState) => {
+    axios.get(`${URL}/dogs/value/${e.target.getAttribute('data-valueMin')}/${e.target.getAttribute('data-valueMax')}`)
+      .then((response) => {
+        const dog_filtered = response.data
+        dispatch(search_success(dog_filtered))
+      })
+  }
+}
+
 const search_clicked = (e) => {
-  console.log('Entrou click');
   return (dispatch, getState) => {
     axios.get(`${URL}/dogs`)
       .then((response) => {
@@ -28,4 +49,4 @@ const search_clicked = (e) => {
   }
 }
 
-export { search_changed, search_clicked, search_success };
+export { search_changed, search_clicked, search_success, filtered, filteredByValue};

@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Modal from 'react-responsive-modal';
 import { search_clicked } from '../../components/SearchBar/SearchActions.js';
+import Checkout from './Checkout.jsx'
+
 import './Checkin.scss';
 
 class Checkin extends React.Component {
@@ -32,6 +34,7 @@ class Checkin extends React.Component {
           <div className="row">
             <div className="cart-title col-md-12"> meu carrinho </div>
             <div className="col-md-12 cart">
+              {console.log(this.props.value, '====')}
               {this.props.value.map((res)=> {
                 cart_value = Number(res.data.value) + cart_value
                 return (
@@ -68,7 +71,7 @@ class Checkin extends React.Component {
                 </div>
               </div>
               <Modal open={this.state.open} onClose={this.onCloseModal} center>
-                <p>teste</p>
+                <Checkout pedido={this.props.value} />
               </Modal>
               
           </div>

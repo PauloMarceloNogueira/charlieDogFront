@@ -37,7 +37,9 @@ class ShoppingCart extends React.Component {
             </button>
             {this.state.open === true ? 
               <div className="arrow_box">
-              { this.props.value.length > 0 ? fullCart : emptyCart }
+              {console.log(this.props, 'AQUIII')}
+              {/* { this.props.value.length > 0 ? fullCart : emptyCart } */}
+              {fullCart}
             </div>  
             : null}
             
