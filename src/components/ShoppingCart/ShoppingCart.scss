@@ -1,0 +1,65 @@
+@import '../../public/css/base/palette.scss';
+.shopping-cart {
+  margin-top: 20px;
+  padding-left: 60%;
+  & .btn {
+    position: absolute;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    background-color: $azul;
+    color: #ffffff;
+    width: 60px;
+    padding: 0;
+    height: 60px;
+  } 
+}
+
+.modal {
+  background-color: $azul;
+}
+
+.arrow_box {
+	position: relative;
+	background: $cinza;
+  top: 90px;
+  width: 300px;
+  z-index: 999;
+  left: -208px;
+}
+.arrow_box:after, .arrow_box:before {
+	bottom: 100%;
+	left: 80%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color:$cinza;
+	border-width: 15px;
+	margin-left: -15px;
+}
+// .arrow_box:before {
+// 	border-color: rgba(194, 225, 245, 0);
+// 	border-bottom-color: #c2e1f5;
+// 	border-width: 15px;
+// 	margin-left: 15px;
+// }
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}

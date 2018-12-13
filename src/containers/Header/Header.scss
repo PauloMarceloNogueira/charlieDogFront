@@ -1,0 +1,17 @@
+@import '../../public/css/base/palette.scss';
+.header {
+  width: 100%;
+  border-bottom: 1px solid $amarelo;
+  padding: 20px 0; }
+
+.menu-topo {
+  margin-top: 30px;
+  text-transform: uppercase; }
+
+.menu-topo > li > a {
+  color: $preto; }
+
+.menu-topo > li > a:hover, .menu-topo .nav > li > a:focus {
+  background-color: $amarelo;
+  color: $preto;
+  border-radius: 0; }

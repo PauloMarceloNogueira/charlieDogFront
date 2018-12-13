@@ -1,0 +1,10 @@
+@import '../../public/css/base/palette.scss';
+.footer {
+  width: 100%;
+  border-top: 1px solid $amarelo;
+  padding: 20px 0; 
+  & p.telefone {
+    margin-top: -10px;
+    font-size: 12px; }
+}
+

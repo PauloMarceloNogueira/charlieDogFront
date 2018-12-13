@@ -1,0 +1,27 @@
+@import '../../public/css/base/palette.scss';
+.buscar {
+  margin-top: 20px; }
+
+.buscar input, .buscar button {
+  border-color: $azul;
+  height: 60px;
+  border-radius: 0; }
+
+.buscar input {
+  font-size: 24px;
+  background-color: $cinza; }
+
+.buscar button {
+  background-color: $azul;
+  color: #ffffff;
+  width: 60px;
+  padding: 0; }
+
+.buscar button:hover,
+.buscar button:active,
+.buscar button:focus {
+  background-color: $amarelo; }
+
+.buscar button span {
+  font-size: 40px;
+  line-height: 33px; }

@@ -1,0 +1,51 @@
+
+.checkin_dog_picture {
+  width: 50px;
+}
+
+.cart {
+  text-align: center;
+  padding-top: 10px;
+  &-title {
+    font-size: 32px;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    color: #333333;
+  }
+  & .row {
+    padding-bottom: 10px;
+  }
+  &:hover {
+    .cart-product-remove {
+      display: block;
+    }
+  }
+  &-product {
+    &-info {
+      text-align: left;
+      &--name {
+        font-size: 18px;
+      }
+    }
+    &-remove {
+      cursor: pointer;
+      display: none;
+    }
+  }
+  &-footer {
+    background-color: #F2F2F2;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 15px;
+    &-total {
+      &--currency {
+        font-weight: bold;
+      }
+    }
+    &-checkout {
+      &-button {
+        cursor: pointer;
+      }
+    }
+  }
+}
